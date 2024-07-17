@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="description"
         content="Zero-Shot Controllable Image-to-Video Animation via Motion Decomposition">
-  <meta name="keywords" content="video,video generation">
+  <meta name="keywords" content="image animation, image-to-video, video generation, controllable image-to-video generation, zero-shot">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Img2VidAnim-0</title>
+  <title>IVA-0</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -19,7 +19,6 @@
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
@@ -28,12 +27,139 @@
 </head>
 <body>
 
-<section class="hero">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://yui010206.github.io/">
+        <span class="icon">
+            <i class="fas fa-home"></i>
+        </span>
+        </a>
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Other Research Projects
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://bobbywu.com/STAR/">
+              STAR - Video Symbolic Reasoning
+            </a>
+            <a class="navbar-item" href="https://github.com/Yui010206/SeViLA">
+              SeViLA - Self-Chained Video QA + Loc
+            </a>
+            <a class="navbar-item" href="https://crema-videollm.github.io/">
+              CREMA - Video + Any Modalities Reasoning
+            </a>
+            <a class="navbar-item" href="https://videotree2024.github.io/">
+              VideoTree - Structured Video Representaion + GPT-4
+            </a>
+            <a class="navbar-item" href="https://raccoon-mllm-gen.github.io/">
+              RACCooN - Editing Video with Auto-Narratives
+            </a>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-3 publication-title">
+              <h1 class="title is-2 publication-title">Zero-Shot Controllable Image-to-Video Animation <br> via Motion Decomposition</h1>
+              <div class="is-size-4 publication-authors"> ACM MM 2024 </div> <br>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://yui010206.github.io/">Shoubin Yu<sup>1</sup></a> </span> &nbsp; &nbsp; &nbsp; &nbsp; 
+
+
+                <span class="author-block">
+                  <a href="https://sites.google.com/asu.edu/jacob">Jacob Zhiyuan Fang<sup>2</sup></a> </span> &nbsp; &nbsp; &nbsp; &nbsp; 
+
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?user=0yfhzZgAAAAJ">Skyler Zheng<sup>2</sup></a>  </span> &nbsp; &nbsp; &nbsp; &nbsp;
+                  <span class="author-block">
+                      <a href="https://gunnar.xyz/">Gunnar Sigurdsson<sup>2</sup></a>     </span> <br>
+
+                <span class="author-block", style="padding-left:30px">
+                  <a href="https://www.cs.rice.edu/~vo9/">Vicente Ordóñez<sup>3</sup></a>     </span>
+                  <span class="author-block", style="padding-left:30px">
+                    <a href="https://www.linkedin.com/in/rpiramuthu/">Robinson Piramuthu<sup>2</sup></a>     </span>
+              <span class="author-block", style="padding-left:30px">
+                <a href="https://www.cs.unc.edu/~mbansal/">Mohit Bansal<sup>1</sup></a></span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>UNC, Chapel Hill</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+              <span class="author-block"><sup>2</sup>Amazon Alexa AI</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+              <span class="author-block"><sup>3</sup>Rice University</span> 
+            </div>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href=""
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span> -->
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href=""
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                    </a>
+                </span>
+  
+                <!-- <span class="link-block">
+                  <a href="https://huggingface.co/Shoubin/CREMA/" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <img style="max-width: 16px;" src="./static/hf_fa.ico" alt="Hugging Face"/>
+                    </span>
+                    <span>Checkpoints and Dataset</span>
+                  </a>
+                </span>  -->
+  
+              </div>
+  
+          </div>      
+        </div>
+      </div>
+      <!-- <center><img src="./images/teaser.png" alt="Teaser" width="100%"></center>     -->
+    </div>
+  </section>
+
+<!-- <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Zero-Shot Controllable Image-to-Video <br> Animation via Motion Decomposition</h1>
+          <h1 class="title is-1 publication-title">Zero-Shot Controllable Image-to-Video Animation <br> via Motion Decomposition</h1>
 
           <div class="column has-text-centered">
 
@@ -42,109 +168,132 @@
       </div>
     </div>
   </div>
+</section> -->
+
+<section class="hero is-small">
+  <div class="body">
+    <div class="container">
+      <center>
+        <img src="static/images/fig1.png" alt="Teaser" width="50%">
+      </center>
+      <div class="content has-text-justified" style="margin: auto; width: 70%;">
+        <b>Figure 1:</b>  Img2VidAnim-Zero for zero-shot image-to-video animation based on motion trajectories from the user. We decompose controllable Image-to-Video generation as two subtasks: (1) out-of-place motion generation, and (2) in-place motion animation which can be solved by leveraging existing modules pre-trained on other task-specific data.
+      </div>
+    </div>
+  </div>
 </section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified" style="margin: auto; width: 80%;">
+          <p>
+            In this paper, we introduce a new challenging task called Zero-shot Controllable Image-to-Video Animation, where the goal is to animate an image based on motion trajectories defined by the user, without fine-tuning the base model. 
+            Primary challenges include maintaining consistency of background, consistency of object in motion, faithfulness to the user-defined trajectory, and quality of motion animation. We also introduce a novel approach for this task, leveragingdiffusionmodelscalledImg2VidAnim-Zero(IVA0).IVA0 tackles our controllable Image-to-Video (I2V) task by decomposing it into two subtasks: ‘out-of-place’ and ‘in-place’ motion animation. Due to this decomposition, IVA0 can leverage existing work on layout-conditioned image generation for out-of-place motion gen- eration, and existing text-conditioned video generation methods for in-place motion animation, thus facilitating zero-shot generation. Our model also addresses key challenges for controllable anima- tion, such as Layout Conditioning via Spatio-Temporal Masking to incorporate user guidance and Motion Afterimage Suppression (MAS) scheme to reduce object ghosting during out-of-place an- imation. Finally, we design a novel controllable I2V benchmark featuring diverse local- and global-level metrics. Results show IVA0 as a new state-of-the-art, establishing a new standard for the zero- shot controllable I2V task. Our method highlights the simplicity and effectiveness of task decomposition and modularization for this novel task for future studies.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+      <center>
+        <img src="static/images/fig2.png" alt="Teaser" width="85%">
+      </center>
+      <div class="content has-text-justified" style="margin: auto; width: 80%;">
+        <b>Left</b>: Our spatio-temporal inpainting masks cover the starting position of objects and their target locations in each frame. <br> <br>
+        <b>Middle</b>: To handle various atomic tasks in controllable I2V, we integrate different task-specific modules. We apply gated self-attention layers as the control module for generating out-of-place motion, while using temporal-attention layers as the motion module for in-place motion animation. <br> <br>
+        <b>Right</b>: We introduce Motion Afterimage Suppression (MAS), which uses object size and IoU to decide whether to inpaint the background with additional grounding tokens. This approach aims for enhanced inpainting quality with reduced afterimage hallucination. <br> <br>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <div class="content has-text-justified">
-          <p>
-            <h5 class="title is-4"> Background-filling Text Prompt: </h5> 
-            <h6 class="title is-5">  background,  empty, no object, no animals, no people, no text </h6>
-          </p>
         </div>
-        <h2 class="title is-3"> Example 1</h2>
-        <img src="./static/images/1.gif" alt="Teaser" width="100%">
+        <h2 class="title is-3"> Visualization</h2>
+        <img src="./static/images/1.gif" alt="Teaser" width="80%">
         <br />
         <br />
-        <h2 class="title is-3"> Example 2</h2>
-        <img src="./static/images/2.gif" alt="Teaser" width="100%">
+        <img src="./static/images/2.gif" alt="Teaser" width="80%">
         <br />
         <br />
-        <h2 class="title is-3"> Example 3</h2>
-        <img src="./static/images/3.gif" alt="Teaser" width="100%">
+        <img src="./static/images/3.gif" alt="Teaser" width="80%">
         <br />
         <br />
-        <h2 class="title is-3"> Example 4</h2>
-        <img src="./static/images/4.gif" alt="Teaser" width="100%">
+        <img src="./static/images/4.gif" alt="Teaser" width="80%">
         <br />
         <br />
-        <h2 class="title is-3"> Example 5</h2>
-        <img src="./static/images/5.gif" alt="Teaser" width="100%">
+        <img src="./static/images/5.gif" alt="Teaser" width="80%">
         <br />
         <br />
-        <h2 class="title is-3"> Example 6</h2>
-        <img src="./static/images/6.gif" alt="Teaser" width="100%">
+        <img src="./static/images/6.gif" alt="Teaser" width="80%">
         <br />
         <br />
-        <h2 class="title is-3"> Example 7</h2>
-        <img src="./static/images/7.gif" alt="Teaser" width="100%">
+        <img src="./static/images/7.gif" alt="Teaser" width="80%">
         <br />
         <br />
-        <h2 class="title is-3"> Example 8</h2>
-        <img src="./static/images/8.gif" alt="Teaser" width="100%">
+        <img src="./static/images/8.gif" alt="Teaser" width="80%">
         <br />
         <br />
-        <h2 class="title is-3"> Example 9</h2>
-        <img src="./static/images/9.gif" alt="Teaser" width="100%">
+        <img src="./static/images/9.gif" alt="Teaser" width="80%">
         <br />
         <br />
-        <h2 class="title is-3"> Example 10</h2>
-        <img src="./static/images/10.gif" alt="Teaser" width="100%">
+        <img src="./static/images/10.gif" alt="Teaser" width="80%">
         <br />
         <br />
-        <h2 class="title is-3"> Example 11</h2>
-        <img src="./static/images/11.gif" alt="Teaser" width="100%">
+        <img src="./static/images/11.gif" alt="Teaser" width="80%">
         <br />
         <br />
-        <h2 class="title is-3"> Example 12</h2>
-        <img src="./static/images/12.gif" alt="Teaser" width="100%">
+        <img src="./static/images/12.gif" alt="Teaser" width="80%">
         <br />
         <br />
-
-        <h2 class="title is-3"> Example 13</h2>
-        <img src="./static/images/13.gif" alt="Teaser" width="100%">
+        <img src="./static/images/13.gif" alt="Teaser" width="80%">
+        <br />
+        <br />
+        <img src="./static/images/14.gif" alt="Teaser" width="80%">
+        <br />
+        <br />
+        <img src="./static/images/15.gif" alt="Teaser" width="80%">
         <br />
         <br />
 
-        <h2 class="title is-3"> Example 14</h2>
-        <img src="./static/images/14.gif" alt="Teaser" width="100%">
+        <img src="./static/images/16.gif" alt="Teaser" width="80%">
         <br />
         <br />
 
-        <h2 class="title is-3"> Example 15</h2>
-        <img src="./static/images/15.gif" alt="Teaser" width="100%">
+        <img src="./static/images/17.gif" alt="Teaser" width="80%">
         <br />
         <br />
 
-        <h2 class="title is-3"> Example 16</h2>
-        <img src="./static/images/16.gif" alt="Teaser" width="100%">
+        <img src="./static/images/18.gif" alt="Teaser" width="80%">
         <br />
         <br />
 
-        <h2 class="title is-3"> Example 17</h2>
-        <img src="./static/images/17.gif" alt="Teaser" width="100%">
+        <img src="./static/images/19.gif" alt="Teaser" width="80%">
         <br />
         <br />
 
-        <h2 class="title is-3"> Example 18</h2>
-        <img src="./static/images/18.gif" alt="Teaser" width="100%">
+        <img src="./static/images/20.gif" alt="Teaser" width="80%">
         <br />
         <br />
-
-        <h2 class="title is-3"> Example 19</h2>
-        <img src="./static/images/19.gif" alt="Teaser" width="100%">
-        <br />
-        <br />
-
-        <h2 class="title is-3"> Example 20</h2>
-        <img src="./static/images/20.gif" alt="Teaser" width="100%">
-        <br />
-        <br />
-
-
-            <br>
 
           </div>
 
@@ -153,6 +302,35 @@
 
       </div>
     </div>
+  </div>
+</section>
+
+
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <h2 class="title is-3">Quantitative Comparison with Evaluated Baselines</h2>
+
+  <center><img src="static/images/tab1.png" alt="Teaser" width="80%"></center>
+</div>
+</div>
+
+
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <h2 class="title is-3">Ablation Study on Our Method</h2>
+
+  <center><img src="static/images/tab2.png" alt="Teaser" width="80%"></center>
+</div>
+</div>
+
+<section class="section" id="BibTeX">
+  <div class="content has-text-justified" style="margin: auto; width: 70%;">
+    <pre><code>@article{yu2024zero,
+  author = {Shoubin Yu and Jacob Zhiyuan Fang and Skyler Zheng and Gunnar Sigurdsson and Vicente Ordóñez and Robinson Piramuthu and Mohit Bansal},
+  title = {Zero-Shot Controllable Image-to-Video Animation via Motion Decomposition},
+  journal = {arxiv},
+  year = {2024},
+}</code></pre>
   </div>
 </section>
 
